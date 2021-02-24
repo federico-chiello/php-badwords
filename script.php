@@ -3,6 +3,7 @@ Visualizzare a schermo il paragrafo con la relativa lunghezza e sostituire la ba
 
 <!-- PHP -->
 <?php $testo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' ?>
+<?php $parola = $_GET['badword']; ?>
 <!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +18,10 @@ Visualizzare a schermo il paragrafo con la relativa lunghezza e sostituire la ba
   <p><strong>PARAGRAFO:</strong> <?php echo $testo; ?></p>
 
   <div><strong>LUNGHEZZA DEL TESTO:</strong> <?php echo strlen($testo); ?></div>
+
+  <div><?php echo $parola; ?>
+    <?php $nuovaParola = str_replace($parola, "***", $testo) ?>
+  </div>
 
 </body>
 </html>
