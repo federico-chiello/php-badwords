@@ -15,13 +15,13 @@ Visualizzare a schermo il paragrafo con la relativa lunghezza e sostituire la ba
 </head>
 <body>
 
-  <p><strong>PARAGRAFO:</strong> <?php echo $testo; ?></p>
+  <p><strong>TESTO:</strong> <?php echo $testo; ?></p>
 
   <div><strong>LUNGHEZZA DEL TESTO:</strong> <?php echo strlen($testo); ?></div>
 
-  <div><?php echo $parola; ?>
-    <?php $nuovaParola = str_replace($parola, "***", $testo) ?>
-  </div>
+  <div><strong>LA PAROLA INSERITA È:</strong> <?php echo $parola; ?></div>
+
+  <p><?php echo $nuovaParola = str_replace($parola, "***", $testo) ?></p>
 
 </body>
 </html>
